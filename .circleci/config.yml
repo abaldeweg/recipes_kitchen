@@ -33,7 +33,8 @@ workflows:
     jobs:
       - unit
   example-workflow:
-      jobs:
-        - cypress/run:
-            post-install:
-              - run: yarn components:generate
+    jobs:
+      - cypress/run:
+          yarn: true
+          post-install:
+            - run: yarn components:generate
