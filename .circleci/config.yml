@@ -21,9 +21,8 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          pkg-manager: yarn
-      - run:
-          command: cypress install
+          pkg-manager: yarn      
+          cache-version: v2
       - run:
           command: yarn components:generate
       - run:
