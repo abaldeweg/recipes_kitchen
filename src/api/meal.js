@@ -1,4 +1,4 @@
-import request from '@/api'
+import request from '~b/api'
 
 export const list = function () {
   return request().get('/api/meal/')

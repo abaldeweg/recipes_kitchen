@@ -10,6 +10,10 @@ module.exports = {
     themeColor: '#d7621d',
   },
   pluginOptions: {
+    components: {
+      title: 'Recipes',
+      needsAuth: true,
+    },
     i18n: {
       locale: 'de-DE',
       fallbackLocale: 'en-US',

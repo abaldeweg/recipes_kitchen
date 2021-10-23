@@ -1,4 +1,4 @@
-import request from '@/api'
+import request from '~b/api'
 
 export const show = function (year, week) {
   return request().get('/api/plan/find', { params: { year, week } })

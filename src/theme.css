@@ -8,6 +8,7 @@ html {
   --color-neutral-04: #a3a3a3;
   --color-neutral-02: #d6d6d6;
   --color-neutral-00: #ffffff;
+  --masthead-top-height: 50px;
 }
 html[data-theme='dark'] {
   --color-primary-10: #d7621d;

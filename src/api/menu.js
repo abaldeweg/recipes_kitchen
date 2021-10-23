@@ -1,4 +1,4 @@
-import request from '@/api'
+import request from '~b/api'
 
 export const show = function (plan) {
   return request().get('/api/menu/find/', { params: { plan } })
