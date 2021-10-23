@@ -32,9 +32,10 @@ workflows:
   test_my_app:
     jobs:
       - unit
-  example-workflow:
-    jobs:
       - cypress/run:
+          executor: cypress/base-14
           yarn: true
           post-install:
             - run: yarn components:generate
+          command: yarn test:e2e --headless
+          
