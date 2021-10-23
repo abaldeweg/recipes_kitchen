@@ -12,5 +12,4 @@ workflows:
                 - '12.22'
               run-command:
                 - 'test:unit'
-                - 'test:e2e --headless'
           pkg-manager: yarn
