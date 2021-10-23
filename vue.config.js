@@ -1,7 +1,4 @@
 module.exports = {
-  devServer: {
-    open: true,
-  },
   pwa: {
     workboxOptions: {
       importWorkboxFrom: 'local',
