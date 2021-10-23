@@ -33,6 +33,7 @@ workflows:
             parameters:
               executor: 
                 - cypress/base-14
+                - cypress/base-12
           yarn: true
           post-install:
             - run: yarn components:generate
