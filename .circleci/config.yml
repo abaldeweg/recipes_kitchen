@@ -4,9 +4,13 @@ orbs:
   cypress: cypress-io/cypress@1.29.0
 jobs:
   unit:
+    parameters:
+      version:
+        type: string
+        default: lts
     executor:
       name: node/default
-      tag: 'lts'
+      tag: <<parameters.version>>
     steps:
       - checkout
       - node/install-packages:
@@ -15,27 +19,21 @@ jobs:
           command: yarn components:generate
       - run:
           command: yarn test:unit
-  e2e:
-    executor:
-      name: node/default
-      tag: 'lts'
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: yarn      
-          cache-version: v2
-      - run:
-          command: yarn components:generate
-      - run:
-          command: yarn test:e2e --headless
 workflows:
-  test_my_app:
+  test:
     jobs:
-      - unit
+      - unit:
+          matrix:
+            parameters:
+              version:
+                - 'lts'
+                - '12.22'
       - cypress/run:
-          executor: cypress/base-14
+          matrix:
+            parameters:
+              executor: 
+                - cypress/base-14
           yarn: true
           post-install:
             - run: yarn components:generate
           command: yarn test:e2e --headless
-          
