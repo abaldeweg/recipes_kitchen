@@ -5,17 +5,18 @@ jobs:
   test:
     executor:
       name: node/default
-      tag: '14'
+      tag: 'lts'
     steps:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-      - run: 
+      - run:
           command: yarn components:generate
       - run:
-          command: test:unit
+          command: yarn run test
           name: Run YARN tests
 workflows:
   test_my_app:
     jobs:
       - test
+      
