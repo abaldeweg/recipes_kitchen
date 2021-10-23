@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@4.7.0
+  cypress: cypress-io/cypress@1.29.0
 jobs:
   unit:
     executor:
@@ -31,4 +32,8 @@ workflows:
   test_my_app:
     jobs:
       - unit
-      - e2e
+  example-workflow:
+      jobs:
+        - cypress/run:
+            post-install:
+              - run: yarn components:generate
