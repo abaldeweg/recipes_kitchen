@@ -2,12 +2,10 @@ version: 2.1
 orbs:
   node: circleci/node@4.7.0
 workflows:
-  run-npm-command:
+  tests:
     jobs:
       - node/run:
           yarn-run: components:generate
-  tests:
-    jobs:
       - node/test:
           matrix:
             parameters:
