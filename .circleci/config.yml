@@ -23,6 +23,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
+          command: cypress install
+      - run:
           command: yarn components:generate
       - run:
           command: yarn test:e2e --headless
