@@ -920,7 +920,7 @@
     vue-meta "2.4.0"
     vue-router "3.5.2"
 
-"@baldeweg/vue-cli-plugin-components@^0.3.4":
+"@baldeweg/vue-cli-plugin-components@0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@baldeweg/vue-cli-plugin-components/-/vue-cli-plugin-components-0.3.4.tgz#4645c141a26f37ef8dace4ad26d49b12b6a71f00"
   integrity sha512-PKUBqZgS5EGodAxrJhhKhCJCRMSoO9rWl1QtbCoZjwQ9Nn8LoKhAJsLlCQS3bxFAfy4TuwinHtJ8DNbyvD1pvA==
